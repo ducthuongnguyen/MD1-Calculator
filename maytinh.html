@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<input size="15" type="text" id="showNumber">
+<br>
+<br>
+<button onclick="pressHere(0)"> 0</button>
+<button onclick="pressHere(1)"> 1</button>
+<button onclick="pressHere(2)"> 2</button>
+<button onclick="pressHere(3)"> 3</button>
+<button onclick="pressHere(4)"> 4</button>
+<br>
+<br>
+<button onclick="pressHere(5)"> 5</button>
+<button onclick="pressHere(6)"> 6</button>
+<button onclick="pressHere(7)"> 7</button>
+<button onclick="pressHere(8)"> 8</button>
+<button onclick="pressHere(9)"> 9</button>
+<br>
+<br>
+<button onclick="pressHere('+')">+</button>
+<button onclick="pressHere('-')">-</button>
+<button onclick="pressHere('*')">*</button>
+<button onclick="pressHere('/')">/</button>
+<button onclick="calculate()">=</button>
+<br>
+<br>
+<button style='width: 100px;background: hotpink;height: 50px' onclick="reset()">AC</button>
+<script>
+    function pressHere(data) {
+        document.getElementById('showNumber').value += data
+    }
+
+    function calculate() {
+        document.getElementById('showNumber').value = eval(document.getElementById('showNumber').value)
+    }
+
+    function reset() {
+        document.getElementById('showNumber').value = ''
+    }
+</script>
+</body>
+</html>
